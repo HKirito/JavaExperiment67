@@ -3,6 +3,9 @@ package Experiment11.T3;
 public class Staff {
     private StaffMember[] staffList;
 
+
+    public void payday(){ }
+
     public StaffMember[] getStaffList() {
         return staffList;
     }
@@ -11,9 +14,6 @@ public class Staff {
         this.staffList = staffList;
     }
 
-    public void payday(){
-
-    }
 
     public static void main(String[] args){
         Staff staff = new Staff();

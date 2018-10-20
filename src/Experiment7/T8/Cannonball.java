@@ -28,11 +28,13 @@ public class Cannonball{
             System.exit(0);
         }
         else {
+
             System.out.println("X :"+getX()+" Y :"+getY());
             x_position = x_position + x_velocity * sec;
             y_position = (sec*y_velocity-(0.5*(9.81)*sec*sec));
             y_velocity = y_velocity - (9.81*sec);
             shooted = true;
+
         }
     }
 

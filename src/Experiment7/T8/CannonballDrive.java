@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class CannonballDrive {
     public static void main(String[] args){
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the X position :");
         Cannonball ball = new Cannonball(scanner.nextDouble());
@@ -13,5 +14,6 @@ public class CannonballDrive {
         double v =scanner.nextDouble();
         System.out.println(a+","+v);
         ball.Shoot(a,v);
+
     }
 }
