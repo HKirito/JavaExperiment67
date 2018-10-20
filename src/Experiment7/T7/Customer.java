@@ -21,16 +21,21 @@ public class Customer {
     }
 
     public void makePurchase(double amount){
-        if (!isDiscount){
-
-            if ((Balance+amount)/100-Balance>0)
-                isDiscount = true;
-            Balance = Balance + amount;
+        double rebalance = amount;
+        if (isDiscount){
+            rebalance = amount -10;
+            isDiscount = false;
         }
-        Balance = Balance + amount -10;
-
+        if (amount>=100){
+            isDiscount = true;
+        }
+        Balance = rebalance + Balance;
     }
-    public boolean discountReached(){
-        return true;
+
+    @Override
+    public String toString() {
+        return "CustomerA{" +
+                "Balance=" + Balance +
+                '}';
     }
 }
